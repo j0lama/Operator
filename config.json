@@ -1,0 +1,16 @@
+{
+    "network": {
+        "mcc": 999,
+        "mnc": 99
+    },
+    "ran": {
+        "usrp": "328B031",
+        "prbs": 50,
+        "mimo": "no"
+    },
+    "core": {
+        "num_ues": 5,
+        "key": "3f3f473f2f3fd0943f3f3f3f097c6862",
+        "opc": "e9be7fb89bb01978e67972ca8580079e"
+    }
+}
