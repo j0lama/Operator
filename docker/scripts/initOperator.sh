@@ -11,6 +11,7 @@ KEY=$(jq -r ".core.key" <<< "$CONFIG")
 OPC=$(jq -r ".core.opc" <<< "$CONFIG")
 NUM_PRBS=$(jq -r ".ran.prbs" <<< "$CONFIG")
 MIMO=$(jq -r ".ran.mimo" <<< "$CONFIG")
+DL_EARFCN=$(jq -r ".ran.dl_earfcn" <<< "$CONFIG")
 
 
 #############
@@ -81,6 +82,7 @@ else
 fi
 sed -i "s/TRANSMISSION_MODE/$TRANSMISSION_MODE/g" enb.conf
 sed -i "s/NUM_PORTS/$NUM_PORTS/g" enb.conf
+sed -i "s/#DL_EARFCN/dl_earfcn = $DL_EARFCN/g" enb.conf
 
 #taskset -c $CPU_IDS srsenb --rf.device_name=uhd --rf.device_args="serial=$USRP" enb.conf
 srsenb enb.conf
