@@ -1,13 +1,13 @@
 {
     "network": {
-        "mcc": 310,
-        "mnc": 410
+        "mcc": 999,
+        "mnc": 99
     },
     "ran": {
-        "usrp": "328900E",
+        "usrp": "328921D",
         "prbs": 50,
         "mimo": "no",
-        "dl_earfcn": 850
+        "dl_earfcn": 3350
     },
     "core": {
         "num_ues": 5,

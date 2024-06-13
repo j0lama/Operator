@@ -1,4 +1,4 @@
-FROM mongo:4.4
+FROM mongo
 LABEL author="Jon Larrea"
 
 SHELL ["/bin/bash", "-c"]
@@ -10,7 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y tcpdump iptables net-tools pyt
 # Install Open5GS
 RUN git clone https://github.com/open5gs/open5gs
 WORKDIR open5gs
-RUN git checkout 85f150c
+#RUN git checkout 85f150c
 RUN meson build --prefix=/open5gs/install
 WORKDIR build
 RUN ninja
